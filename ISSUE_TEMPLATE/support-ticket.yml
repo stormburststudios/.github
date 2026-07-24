@@ -1,0 +1,95 @@
+name: Support Ticket
+description: Raise a customer support ticket
+title: "[Support] "
+labels: ["support"]
+body:
+  - type: dropdown
+    id: ticket-type
+    attributes:
+      label: Ticket Type
+      options:
+        - Bug
+        - Internal Tooling
+        - Integration Improvement
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: "[Explanation of severity categories](https://oneupsales.slite.com/app/docs/tgr8bmyMcaQxVx#d97492f6)"
+      options:
+        - Outage
+        - Critical
+        - Medium
+        - Low
+        - Minor
+
+  - type: dropdown
+    id: platform-area
+    attributes:
+      label: Platform Area
+      options:
+        - Dashboards/Reporting/Charts/Job Pipeline
+        - Automations/Emails
+        - Metrics/Targets/Taxonomy
+        - Onboarding/Settings/Team Management/Permissions
+        - Coach
+        - Integrations
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source
+    attributes:
+      label: Source
+      options:
+        - Ticket
+        - Phone
+        - Internal
+    validations:
+      required: true
+
+  - type: input
+    id: client
+    attributes:
+      label: Client
+      description: Customer name (leave blank for internal tooling tickets)
+      placeholder: e.g. Acme Recruitment Ltd
+
+  - type: input
+    id: client-subdomain
+    attributes:
+      label: Client subdomain
+      description: e.g. acme (from acme.oneupsales.co.uk)
+      placeholder: e.g. acme
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What's happening?
+      value: |
+        ## Overview
+        Give a general summary of the issue.
+
+        ## Steps to Reproduce
+        Provide steps to recreate the issue. Leave links to pages if possible.
+
+        1. 
+        2. 
+
+        **Expected result:**
+
+        **Observed result:**
+
+        ## Extra Info
+        Add any IDs/examples of affected data/users etc. Screenshots too!
+
+        ## Impact to client
+        - Does this impact the client's day-to-day operation? ✅ ❌
+        - Is there a workaround for this issue? ✅ ❌
+        - What's the client's attitude towards the issue? Are they at risk of churn?
+        - Are multiple clients affected? ✅ ❌
+    validations:
+      required: true
