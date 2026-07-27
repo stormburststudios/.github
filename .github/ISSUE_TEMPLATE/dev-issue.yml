@@ -35,12 +35,13 @@ body:
     attributes:
       label: Type of work
       options:
-        - Roadmap - Expansion
+        - Roadmap - New Products
         - Roadmap - Enhancements
-        - Roadmap - Innovation
+        - Roadmap - Innovation (Team Zero)
         - Integrations
         - KTLO/ Bugs
         - Other
+      default: 2
     validations:
       required: false
 
@@ -50,7 +51,7 @@ body:
       label: Description
       description: What needs to be done, or what's the problem?
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: acceptance-criteria
