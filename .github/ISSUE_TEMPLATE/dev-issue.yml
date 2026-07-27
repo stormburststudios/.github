@@ -41,7 +41,7 @@ body:
         - Integrations
         - KTLO/ Bugs
         - Other
-      default: 2
+      default: 1
     validations:
       required: false
 
