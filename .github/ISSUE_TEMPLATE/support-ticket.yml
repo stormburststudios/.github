@@ -40,17 +40,6 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: source
-    attributes:
-      label: Source
-      options:
-        - Ticket
-        - Phone
-        - Internal
-    validations:
-      required: true
-
   - type: input
     id: client
     attributes:
